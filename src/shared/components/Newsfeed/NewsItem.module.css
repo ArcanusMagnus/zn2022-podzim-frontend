@@ -1,7 +1,19 @@
 .news-item {
-    /* just placeholder styles for now */
-    display: block;
+  /* just placeholder styles for now */
+  padding: 1rem;
+  min-height: 400px;
+  height: fit-content;
+  background-color: yellow;
+  width: calc(100% / 3);
+}
+
+.news-item__one {
     width: 100%;
-    min-height: 200px;
     background-color: green;
+}
+
+.news-item__two {
+    min-height: 300px;
+  width: 50%;
+  background-color: red;
 }
