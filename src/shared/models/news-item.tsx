@@ -10,8 +10,9 @@ export type NewsItemModel = {
   date: Date;
   author?: string;
   color: string;
-  importance: 1 | 2 | 3;
+  importance: 1 | 2 | 3 | 4;
   socials?: JSX.Element[];
   embeded?: EmbededModel;
   children?: JSX.Element | string;
+  clickable?: boolean;
 };

@@ -13,6 +13,7 @@ const NewsList = (props: NewsListModel) => {
         {props.content.map((item) => {
           return (
             <NewsItem
+              key={item.id}
               id={item.id}
               title={item.title}
               leadParagraph={item.leadParagraph}
@@ -20,6 +21,9 @@ const NewsList = (props: NewsListModel) => {
               date={item.date}
               importance={item.importance}
               text={item.text}
+              imageUrl={item.imageUrl}
+              author={item.author}
+              clickable={item.clickable}
             />
           );
         })}

@@ -39,7 +39,7 @@ const Header = () => {
           <Link to="/">
             <img src={navLogo} alt="Žižkovská noc logo" />
           </Link>
-          <p className={styles["header-left__date"]}>25. a 26. března</p>
+          <p className={styles["header-left__date"]}>22. až 24. září</p>
         </div>
         {width < 1350 && burger}
         {width >= 1350 && (
