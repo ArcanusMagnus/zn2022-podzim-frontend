@@ -1,7 +1,8 @@
-import NewsList from "../../shared/components/Newsfeed/NewsList";
-import { NewsItemModel } from "../../shared/models/news-item";
+import { useParams } from "react-router-dom";
 
-import styles from "./Landing.module.css";
+import Section from "../../shared/components/UI/Section";
+import { NewsItemModel } from "../../shared/models/news-item";
+import styles from "./SingleArticle.module.css";
 
 const DUMMY_NEWS: NewsItemModel[] = [
   {
@@ -43,8 +44,32 @@ const DUMMY_NEWS: NewsItemModel[] = [
   },
 ];
 
-const Landing = () => {
-  return <NewsList id="home_news" content={DUMMY_NEWS} />;
+const SingleArticle = () => {
+  const articleId = useParams().aid;
+  const article = DUMMY_NEWS.find((a) => a.id === articleId);
+
+  /* Just fallback, make properly later */
+  if (!article) {
+    return <p className="center">Article not found!</p>;
+  }
+
+  return (
+    <Section className={styles["single-article"]}>
+      <div
+        className={styles["image-container"]}
+        style={{ backgroundColor: article.color }}
+      >
+        <img src={article.imageUrl} alt={article.title} />
+      </div>
+      <p className={styles.date}>{article.date.toLocaleString()}</p>
+      <h2>{article.title}</h2>
+      <div className={styles["article-content"]}>
+        <p className={styles.lead}>{article.leadParagraph}</p>
+        <p>{article.text}</p>
+      </div>
+      <p className={styles.date}>-{article.author}</p>
+    </Section>
+  );
 };
 
-export default Landing;
+export default SingleArticle;

@@ -1,0 +1,31 @@
+.single-article {
+    text-align: center;
+    display: block;
+}
+
+.single-article h2 {
+  width: 100%;
+}
+
+.single-article .lead {
+    font-weight: bold;
+}
+
+.single-article .image-container {
+    width: 100%;
+    margin-bottom: 2rem;
+    font-size: 0;
+}
+
+.single-article .image-container img {
+    max-width: 100%;
+}
+
+.single-article .article-content {
+    padding: 0 2rem
+}
+
+.single-article .date {
+    text-align: right;
+    margin-right: 5rem;
+}
