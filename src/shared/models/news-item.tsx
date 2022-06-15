@@ -13,6 +13,6 @@ export type NewsItemModel = {
   importance: 1 | 2 | 3 | 4;
   socials?: JSX.Element;
   embeded?: EmbededModel;
-  children?: JSX.Element | string;
+  children?: JSX.Element | string | (JSX.Element | string)[];
   clickable?: boolean;
 };

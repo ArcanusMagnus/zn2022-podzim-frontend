@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 import { NewsItemModel } from "../../models/news-item";
+import Embeded from "../UI/Embeded";
 import styles from "./NewsItem.module.css";
 
 const NewsItem = (props: NewsItemModel) => {
@@ -43,6 +44,8 @@ const NewsItem = (props: NewsItemModel) => {
       : undefined
   }`;
 
+  const embeded = props.embeded ? <Embeded data={props.embeded} /> : null;
+
   /* Needs to define colors better - create some list of globally available classes or something like that */
 
   return (
@@ -52,7 +55,9 @@ const NewsItem = (props: NewsItemModel) => {
         {header}
         <p>{props.leadParagraph}</p>
         {props.clickable ? readMore : text}
-        {props.socials ?? props.socials}
+        {embeded}
+        {props.children}
+        {props.socials && props.socials}
       </div>
     </div>
   );

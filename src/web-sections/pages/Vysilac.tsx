@@ -1,11 +1,22 @@
 import NewsItem from "../../shared/components/Newsfeed/NewsItem";
 import Section from "../../shared/components/UI/Section";
 import Socials from "../../shared/components/UI/Socials";
+import { EmbededModel } from "../../shared/models/embeded";
 import styles from "./Vysilac.module.css";
 
 const Vysilac = () => {
   const text =
     "Festival Žižkovská Noc je světem, v němž není místo pro jakoukoliv formu diskriminace. Podcast Vysílač chce tento svět rozšířit za hranice žižkovských a holešovických ulic. Dáváme prostor tématům odrážející hodnoty festivalu a lidem, kteří jim rozumí. Moderují Tereza Butková, Petra Mikolášová a Františka Tranová. Znělka a edit Jonáš Kucharský.";
+
+  const embeded: EmbededModel = {
+    id: "player_iframe",
+    src: "https://www.buzzsprout.com/1408432?client_source=large_player&iframe=true&referrer=https%3A%2F%2Fwww.buzzsprout.com%2F1408432%2Fpodcast%2Fembed",
+    width: "100%",
+    height: "400",
+    loading: "lazy",
+    title: "Vysílač",
+  };
+
   return (
     <Section className={styles.vysilac}>
       <NewsItem
@@ -23,6 +34,7 @@ const Vysilac = () => {
             apple="https://podcasts.apple.com/cz/podcast/vys%C3%ADla%C4%8D/id1538409505"
           />
         }
+        embeded={embeded}
       />
     </Section>
   );
