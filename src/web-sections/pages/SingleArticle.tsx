@@ -53,6 +53,8 @@ const SingleArticle = () => {
     return <p className="center">Article not found!</p>;
   }
 
+  const date = article.date ? (<p className={styles.date}>{article.date.toLocaleString()}</p>) : ''; 
+
   return (
     <Section className={styles["single-article"]}>
       <div
@@ -61,7 +63,7 @@ const SingleArticle = () => {
       >
         <img src={article.imageUrl} alt={article.title} />
       </div>
-      <p className={styles.date}>{article.date.toLocaleString()}</p>
+      {date}
       <h2>{article.title}</h2>
       <div className={styles["article-content"]}>
         <p className={styles.lead}>{article.leadParagraph}</p>

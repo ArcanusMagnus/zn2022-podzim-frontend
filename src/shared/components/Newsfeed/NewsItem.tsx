@@ -43,13 +43,16 @@ const NewsItem = (props: NewsItemModel) => {
       : undefined
   }`;
 
+  /* Needs to define colors better - create some list of globally available classes or something like that */
+
   return (
-    <div className={classes}>
+    <div className={classes} style={{ borderColor: props.color }}>
       {image}
       <div className={styles.content}>
         {header}
         <p>{props.leadParagraph}</p>
         {props.clickable ? readMore : text}
+        {props.socials ?? props.socials}
       </div>
     </div>
   );

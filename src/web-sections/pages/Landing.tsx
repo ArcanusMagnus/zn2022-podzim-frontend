@@ -1,5 +1,6 @@
 import NewsList from "../../shared/components/Newsfeed/NewsList";
 import { NewsItemModel } from "../../shared/models/news-item";
+import styles from "./Landing.module.css";
 
 const DUMMY_NEWS: NewsItemModel[] = [
   {
@@ -42,7 +43,9 @@ const DUMMY_NEWS: NewsItemModel[] = [
 ];
 
 const Landing = () => {
-  return <NewsList id="home_news" content={DUMMY_NEWS} />;
+  return (
+    <NewsList id="home_news" content={DUMMY_NEWS} className={styles.landing} />
+  );
 };
 
 export default Landing;

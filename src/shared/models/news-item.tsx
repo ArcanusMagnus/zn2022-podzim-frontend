@@ -7,11 +7,11 @@ export type NewsItemModel = {
   leadParagraph?: string;
   text: JSX.Element | string;
   imageUrl?: string;
-  date: Date;
+  date?: Date;
   author?: string;
   color: string;
   importance: 1 | 2 | 3 | 4;
-  socials?: JSX.Element[];
+  socials?: JSX.Element;
   embeded?: EmbededModel;
   children?: JSX.Element | string;
   clickable?: boolean;
