@@ -2,7 +2,7 @@
   /* just placeholder styles for now */
   display: inline-flex;
   flex-wrap: wrap;
-  margin: 0 0 5rem 0;
+  margin: 0 1rem 5rem 1rem;
   min-height: 350px;
   height: fit-content;
   border: 1px solid #50c1e8;
@@ -12,11 +12,12 @@
 .news-item__one {
   width: 100%;
   border: 1px solid #9fcd69;
+  margin: 0 0 5rem 0;
 }
 
 .news-item__two {
   min-height: 300px;
-  width: 50%;
+  width: 46%;
   border: 1px solid #ffcd58;
 }
 
@@ -42,6 +43,7 @@
 
 .news-item__two .image-link {
   width: 50%;
+  height: fit-content;
 }
 
 .news-item .content {

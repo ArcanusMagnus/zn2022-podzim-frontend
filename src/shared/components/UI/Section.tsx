@@ -3,7 +3,7 @@ import styles from "./Section.module.css";
 const Section = (props: {
   className?: string;
   id?: string;
-  children: JSX.Element | string | (JSX.Element | string)[];
+  children: React.ReactNode;
 }) => {
   const classes = styles.section + " " + props.className;
 

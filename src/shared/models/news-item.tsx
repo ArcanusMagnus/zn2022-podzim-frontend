@@ -5,7 +5,7 @@ export type NewsItemModel = {
   title: string;
   className?: string;
   leadParagraph?: string;
-  text: JSX.Element | string;
+  text?: string;
   imageUrl?: string;
   date?: Date;
   author?: string;
@@ -13,6 +13,7 @@ export type NewsItemModel = {
   importance: 1 | 2 | 3 | 4;
   socials?: JSX.Element;
   embeded?: EmbededModel;
-  children?: JSX.Element | string | (JSX.Element | string)[];
+  children?: React.ReactNode;
   clickable?: boolean;
+  audio?: string;
 };

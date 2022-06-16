@@ -46,6 +46,8 @@ const NewsItem = (props: NewsItemModel) => {
 
   const embeded = props.embeded ? <Embeded data={props.embeded} /> : null;
 
+  const audio = props.audio ? <audio controls><source src={props.audio} /></audio> : null;
+
   /* Needs to define colors better - create some list of globally available classes or something like that */
 
   return (
@@ -54,9 +56,10 @@ const NewsItem = (props: NewsItemModel) => {
       <div className={styles.content}>
         {header}
         <p>{props.leadParagraph}</p>
-        {props.clickable ? readMore : text}
-        {embeded}
         {props.children}
+        {embeded}
+        {audio}
+        {props.clickable ? readMore : text}
         {props.socials && props.socials}
       </div>
     </div>

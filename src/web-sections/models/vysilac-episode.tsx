@@ -1,0 +1,22 @@
+export type Episode = {
+  artist: string;
+  artwork_url: string;
+  audio_url: string;
+  custom_url: string;
+  description: string;
+  duration: number;
+  episode_number: number;
+  explicit: boolean;
+  guid: string;
+  hq: boolean;
+  id: number;
+  inactive_at: number | null;
+  magic_mastering: boolean;
+  private: boolean;
+  published_at: string;
+  season_number: number;
+  summary: string;
+  tags: string;
+  title: string;
+  total_plays: number;
+};
